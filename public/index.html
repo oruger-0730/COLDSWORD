@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>コールドソード - カードゲーム</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="rotate-warning">
+    画面を横向きにしてください。
+  </div>
+  
+  <div id="game-content">
+    <div id="game-container">
+      <h1 class="title">コールドソード</h1>
+      <div class="username" id="username"></div>
+      <div id="login-area">
+        <button onclick="goToLogin()" class="btn" id="login-button">ログイン</button>
+        <button onclick="goToSignup()" class="btn" id="register-button">サインアップ</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

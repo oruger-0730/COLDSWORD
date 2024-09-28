@@ -26,10 +26,12 @@ class Database {
     }
 
     auth(username, sessionID) {
-        if (this.accountData[username] && this.accountData[username].sessions.includes(sessionID)) {
-            return true;
-        }
-        return false;
+        if (this.accountData[username] &&
+            this.accountData[username].enabled &&
+            this.accountData[username].sessions.includes(sessionID) &&
+            this.accountData[username].sessions[sessionID].enabled &&
+            this.blacklistData[username].enabled) return true;
+        else return false;
     }
 }
 

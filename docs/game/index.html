@@ -58,25 +58,25 @@
         color: black;
       }
     </style>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/COLDSWORD/css/style.css">
   </head>
   <body>
     <h1>COLD SWORD</h1>
     <div class="username" id="username"></div>
     <div class="container">
-      <a href="/leaguematch" class="league">リーグ戦</a>
-      <a href="/AImatch" class="ai">練習戦(AI戦)</a>
-      <a href="/playermatch" class="player">練習戦(プレイヤー戦)</a>
+      <a href="/COLDSWORD/leaguematch/" class="league">リーグ戦</a>
+      <a href="/COLDSWORD/AImatch/" class="ai">練習戦(AI戦)</a>
+      <a href="/COLDSWORD/playermatch/" class="player">練習戦(プレイヤー戦)</a>
     </div>
     <script>
       // ページが読み込まれた際にlocalStorageをチェック
       window.onload = function () {
         const loggedInUser = localStorage.getItem("loggedInUser");
         if (!loggedInUser) {
-          window.location.href = "/";
+          window.location.href = "/COLDSWORD/";
         }
       };
     </script>
-    <script src="script.js"></script>
+    <script src="/COLDSWORD/js/script.js"></script>
   </body>
 </html>

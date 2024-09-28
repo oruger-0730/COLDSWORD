@@ -17,7 +17,7 @@ function register() {
             setTimeout(() => {
                 if (res.status === 201) {
                     alert('アカウントが作成されました');
-                    location.href = './login.html';
+                    location.href = './../login';
                 }
                 else {
                     alert(res.data.message);

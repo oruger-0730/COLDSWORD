@@ -68,15 +68,6 @@
       <a href="../AImatch/" class="ai">練習戦(AI戦)</a>
       <a href="../playermatch/" class="player">練習戦(プレイヤー戦)</a>
     </div>
-    <script>
-      // ページが読み込まれた際にlocalStorageをチェック
-      window.onload = function () {
-        const loggedInUser = localStorage.getItem("loggedInUser");
-        if (!loggedInUser) {
-          window.location.href = "../";
-        }
-      };
-    </script>
-    <script src="../js/script.js"></script>
+    <script src="../js/auth-session.js"></script>
   </body>
 </html>

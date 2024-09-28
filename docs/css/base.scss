@@ -2,6 +2,30 @@
 $background-color: #fafafa;
 $color: #a3e6ff;
 
+header {
+  .username {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 18px;
+    color: #333333;
+  }
+  #loginButton {
+    position: absolute;
+    top: 10px;
+    right: 100px;
+    font-size: 18px;
+    color: #333333;
+  }
+  #registerButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 18px;
+    color: #333333;
+  }
+}
+
 body {
   background-color: $background-color;
   min-height: 100vh; /*画面の高さの最小値を指定*/

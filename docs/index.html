@@ -6,29 +6,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>コールドソード - カードゲーム</title>
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/base.css">
 </head>
 
 <body>
+  <header>
+    <div id="user__info__panel">
+      <img src="" alt="ユーザーのアイコン画像" id="userIcon">
+      <span id="userName">ゲスト</span>
+      <a href="./login/" id="loginButton">ログイン</a>
+      <a href="./register/" id="registerButton">新規登録</a>
+    </div>
+  </header>
   <main>
-    <header>
-      <div id="user-info">
-        <img src="" alt="ユーザーのアイコン画像" id="userIcon">
-        <span id="userName">ゲスト</span>
-        <a href="./login/" id="loginButton">ログイン</a>
-        <a href="./register/" id="registerButton">新規登録</a>
-      </div>
-    </header>
     <div id="rotate-warning">
       画面を横向きにしてください。
     </div>
-    <div id="game-content">
-      <div id="game-container">
-        <h1 class="title">コールドソード</h1>
-        <div class="button-container">
-          <a href="./game/" class="button">ゲームを始める</a>
-          <a href="./maintenance/" class="button">メンテナンス情報</a>
+    <div class="game__content__panel">
+      <h1 class="title">コールドソード</h1>
+      <div class="button-container">
+        <a href="./game/" class="button">ゲームを始める</a>
+        <a href="./maintenance/" class="button">メンテナンス情報</a>
       </div>
-    </div>
   </main>
 </body>
 <script src="../js/script.js"></script>

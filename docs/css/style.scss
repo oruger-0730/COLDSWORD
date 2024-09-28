@@ -1,101 +1,48 @@
 /* 縦画面での警告メッセージ */
-@media screen and (orientation:portrait) {
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      background-color: #000000;
-    }
-    #rotate-warning {
-      display: block;
-      color: white;
-      font-size: 24px;
-      text-align: center;
-    }
-    #game-content {
-      display: none;
-    }
+#rotate-warning {
+  display: none;
 }
-  
-/* 横画面での表示 */
-@media screen and (orientation:landscape) {
-    #rotate-warning {
-      display: none;
-    }
-    #game-content {
-      display: block;
-    }
-}
-  
-/* 全体レイアウト */
-body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #ffffff;
-    font-family: 'Hannotate SC', 'Arial', sans-serif;
-    overflow: hidden;
-}
-  
-/* メインコンテナ */
-#game-container {
-    text-align: center;
-}
-  
-/* タイトルのスタイル */
-.title {
-    font-size: 48px;
-    font-weight: bold;
-    color: black;
-    font-family: 'Hannotate SC', 'Arial', sans-serif;
-    margin-bottom: 50px;
-}
-  
-/* ボタンのスタイル */
-.btn {
+@media screen and (orientation: portrait) {
+  #rotate-warning {
     display: block;
-    width: 200px;
-    height: 50px;
-    margin: 10px auto;
-    font-size: 24px;
-    color: black;
-    background-color: white;
-    border: 2px solid black;
-    border-radius: 10px;
-    font-family: 'Hannotate SC', 'Arial', sans-serif;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
 }
 
-/* ボタンホバー時のスタイル */
-.btn:hover {
-    background-color: #f0f0f0;
-}
-  
-/* 画面右上のユーザーネーム */
-.username {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 18px;
-    color: #333333;
+/* ボタンのスタイル */
+.button {
+  display: block;
+  width: 200px;
+  height: 50px;
+  margin: 0.5rem;
+  padding: 1rem;
+  text-align: center;
+  line-height: 3rem;
+  font-size: 1.5rem;
+  color: black;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  font-family: "Hannotate SC", "Arial", sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  &:hover {
+    background-color: #303030;
+    color: white;
+  }
 }
 
-/* ログインエリアのスタイル */
-#login-area {
-    display: flex;        /* フレックスボックスを使用して横並び */
-    justify-content: center; /* 水平方向の中央揃え */
-    margin-top: 20px;    /* 上の余白を追加 */
-}
-
-/* ゲームコンテナのスタイル */
-#game-container {
-    display: flex;
-    flex-direction: column; /* 縦並びに */
-    align-items: center;     /* 中央揃え */
+.game__content__panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

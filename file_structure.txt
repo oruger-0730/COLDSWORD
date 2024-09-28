@@ -1,0 +1,54 @@
+.
+├── boot.sh
+├── characters.md
+├── db
+│   ├── access.log
+│   ├── account.json
+│   └── blacklist.json
+├── docs
+│   ├── AImatch
+│   │   └── index.html
+│   ├── css
+│   │   ├── base.css
+│   │   ├── base.scss
+│   │   ├── reset.css
+│   │   ├── style.css
+│   │   └── style.scss
+│   ├── game
+│   │   └── index.html
+│   ├── index.html
+│   ├── js
+│   │   ├── auth-session.js
+│   │   ├── login.js
+│   │   ├── logout.js
+│   │   ├── register.js
+│   │   └── script.js
+│   ├── leaguematch
+│   │   └── index.html
+│   ├── login
+│   │   └── index.html
+│   ├── maintenance
+│   │   └── index.html
+│   ├── playermatch
+│   │   └── index.html
+│   └── signup
+│       └── index.html
+├── file_structure.txt
+├── index.js
+├── modules
+│   ├── db.js
+│   ├── delete
+│   │   └── index.js
+│   ├── patch
+│   │   └── index.js
+│   ├── post
+│   │   └── index.js
+│   ├── put
+│   │   └── index.js
+│   └── url-processor.js
+├── package.json
+├── package-lock.json
+├── README.md
+└── rule.txt
+
+17 directories, 35 files

@@ -23,7 +23,7 @@ if (username) {
     document.getElementById('username').textContent = 'ログインしていません';
 }
 
-//ログインしている際は表示するボタンを変更
+// ページが読み込まれた際にログイン状態をチェックしてボタンを変更
 document.addEventListener('DOMContentLoaded', () => {
 
     // localStorage からユーザーネームを取得
@@ -43,15 +43,39 @@ document.addEventListener('DOMContentLoaded', () => {
         const playButton = document.createElement('button');
         playButton.textContent = 'プレイ';
         playButton.className = 'btn';  // ボタンのスタイルを適用
-        playButton.onclick = goToPlay; // ボタンが押された時の動作
+        playButton.onclick = goToPlay; // プレイボタンが押されたときの動作
         document.getElementById('login-area').appendChild(playButton);
 
+        // "ログアウト" ボタンを作成して表示
+        const logoutButton = document.createElement('button');
+        logoutButton.textContent = 'ログアウト';
+        logoutButton.className = 'btn';  // ボタンのスタイルを適用
+        logoutButton.onclick = logout; // ログアウトボタンが押されたときの動作
+        document.getElementById('login-area').appendChild(logoutButton);
+
     } else {
-
         // ユーザーネームがない場合は「ログインしていません」と表示
-
         document.getElementById('username').textContent = 'ログインしていません';
-
     }
-
 });
+
+// ゲームプレイページに遷移
+function goToPlay() {
+  window.location.href = "game.html";
+}
+
+
+// ログアウト機能
+function logout() {
+    // 「ログアウトしますか？」という確認ダイアログを表示
+    const confirmation = confirm("ログアウトしますか？");
+
+    // 「はい」が押された場合にログアウト処理を実行
+    if (confirmation) {
+        // localStorage からユーザーデータを消去
+        localStorage.removeItem('loggedInUser');
+
+        // ページをリロードしてログイン画面に戻す
+        window.location.reload();
+    }
+}

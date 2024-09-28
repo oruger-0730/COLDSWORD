@@ -13,5 +13,10 @@
     "nickname": "test-1",
     "password": "Password1234567890",
     "dob": "2024-09-26"
+  },
+  {
+    "nickname": "test-2",
+    "password": "testto2",
+    "dob": "2024-09-27"
   }
 ]

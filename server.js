@@ -84,25 +84,29 @@ app.post("/create-account", (req, res) => {
 });
 
 //ログインリクエスト
-app.post('/login', async (req, res) => {
-    const { nickname, password } = req.body;
-    try {
-        const data = await fs.promises.readFile('public/account.json', 'utf8');
-        const accounts = JSON.parse(data);
-        const account = accounts.find(acc => acc.nickname === nickname);
+app.post("/login", async (req, res) => {
+  const { nickname, password } = req.body;
+  try {
+    const data = await fs.promises.readFile("public/account.json", "utf8");
+    const accounts = JSON.parse(data);
+    const account = accounts.find((acc) => acc.nickname === nickname);
 
-        if (account && account.password === password) {
-            return res.status(200);
-        } else {
-            return res.status(401).json({ message: 'ニックネームまたはパスワードが違います' });
-        }
-    } catch (error) {
-        console.error(`アカウントデータの読み込み中にエラーが発生しました: ${error}`);
-        res.status(500).json({ message: '予期せぬエラーが発生しました' });
+    if (account && account.password === password) {
+      return res.status(200).json({ message: "OK" });
+    } else {
+      return res
+        .status(401)
+        .json({ message: "ニックネームまたはパスワードが違います" });
     }
+  } catch (error) {
+    console.error(
+      `アカウントデータの読み込み中にエラーが発生しました: ${error}`
+    );
+    res.status(500).json({ message: "予期せぬエラーが発生しました" });
+  }
 });
 
 // サーバーの起動
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+  console.log(`起動しました。 ポート番号:${PORT}`);
 });

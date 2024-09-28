@@ -11,7 +11,7 @@ function login() {
         if (res.status === 201) {
             localStorage.setItem('username', username);
             localStorage.setItem('sessionID', res.data.sessionID);
-            location.href = '/';
+            location.href = '../';
         }
     })
         .catch(err => console.error(err));

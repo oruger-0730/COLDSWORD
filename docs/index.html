@@ -1,25 +1,36 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>コールドソード - カードゲーム</title>
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
-  <div id="rotate-warning">
-    画面を横向きにしてください。
-  </div>
-  <div id="game-content">
-    <div id="game-container">
-      <h1 class="title">コールドソード</h1>
-      <div class="username" id="username"></div>
-      <div id="login-area">
-        <button onclick="goToLogin()" class="btn" id="login-button">ログイン</button>
-        <button onclick="goToSignup()" class="btn" id="register-button">サインアップ</button>
+  <main>
+    <header>
+      <div id="user-info">
+        <img src="" alt="ユーザーのアイコン画像" id="userIcon">
+        <span id="userName">ゲスト</span>
+        <a href="./login/" id="loginButton">ログイン</a>
+        <a href="./register/" id="registerButton">新規登録</a>
+      </div>
+    </header>
+    <div id="rotate-warning">
+      画面を横向きにしてください。
+    </div>
+    <div id="game-content">
+      <div id="game-container">
+        <h1 class="title">コールドソード</h1>
+        <div class="button-container">
+          <a href="./game/" class="button">ゲームを始める</a>
+          <a href="./maintenance/" class="button">メンテナンス情報</a>
       </div>
     </div>
-  </div>
-  <script src="script.js"></script>
+  </main>
 </body>
+<script src="../js/script.js"></script>
+
 </html>

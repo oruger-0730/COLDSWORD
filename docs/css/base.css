@@ -1,0 +1,39 @@
+@charset "UTF-8";
+body {
+  background-color: #fafafa;
+  min-height: 100vh; /*画面の高さの最小値を指定*/
+  display: flex;
+  flex-direction: column;
+}
+body main {
+  flex-grow: 1;
+}
+body footer {
+  background-color: black;
+  padding: 1rem;
+  text-align: center;
+}
+body footer .foot__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem auto;
+}
+body footer .foot__container a {
+  display: inline-block;
+  padding: 0.5rem;
+  color: white;
+  margin: 0 0.5rem;
+}
+body footer .foot__container a:hover {
+  color: #a3e6ff;
+}
+@media screen and (max-width: 768px) {
+  body footer .foot__container {
+    flex-direction: column;
+  }
+}
+body footer .cpr {
+  text-align: right;
+  margin: 1rem;
+}

@@ -1,0 +1,26 @@
+{
+  "name": "coldsword",
+  "version": "1.0.0",
+  "description": "cardgame",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "node --env-file=.env index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oruger-0730/COLDSWORD.git"
+  },
+  "keywords": [
+    "cold",
+    "sword"
+  ],
+  "author": "oruger",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oruger-0730/COLDSWORD/issues"
+  },
+  "homepage": "https://github.com/oruger-0730/COLDSWORD#readme"
+}

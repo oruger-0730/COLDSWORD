@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>サインアップ - コールドソード</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex; /* フレックスボックスを使用 */
+        justify-content: center; /* 水平方向の中央揃え */
+        align-items: center; /* 垂直方向の中央揃え */
+        height: 100vh; /* ビューポートの高さに合わせる */
+        margin: 0; /* マージンをリセット */
+      }
+      .form-container {
+        text-align: center; /* フォームの内容を中央揃え */
+        max-width: 400px; /* フォームの最大幅 */
+        width: 100%; /* 幅を100%に設定 */
+      }
+      h1 {
+        position: absolute; /* 絶対位置を指定 */
+        top: 20px; /* 上からの位置 */
+        left: 20px; /* 左からの位置 */
+        margin: 0; /* マージンをリセット */
+      }
+      label {
+        display: block;
+        margin-top: 10px;
+      }
+      input {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+      }
+      button {
+        margin-top: 15px;
+      }
+    </style>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <h1>サインアップ</h1>
+    <div class="form-container">
+      <form id="newAccountForm">
+        <label for="nickname">ユーザーネーム:</label>
+        <input
+          type="text"
+          id="nickname"
+          name="nickname"
+          required
+          minlength="3"
+          maxlength="20"
+        />
+
+        <label for="password">パスワード:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          required
+          minlength="6"
+        />
+
+        <label for="dob">生年月日:</label>
+        <input type="date" id="dob" name="dob" required />
+
+        <button type="submit">アカウント作成</button>
+      </form>
+    </div>
+
+    <script>
+      document
+        .getElementById("newAccountForm")
+        .addEventListener("submit", async function (e) {
+          e.preventDefault();
+
+          const nickname = document.getElementById("nickname").value;
+          const password = document.getElementById("password").value;
+          const dob = document.getElementById("dob").value;
+
+          const accountData = { nickname, password, dob };
+
+          try {
+            const response = await fetch("/create-account", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(accountData),
+            });
+
+            if (response.ok) {
+              window.location.href = "/game";
+            } else {
+              const errorMessage = await response.text();
+              alert(`アカウント作成に失敗しました: ${errorMessage}`);
+            }
+          } catch (error) {
+            alert("ネットワークエラーが発生しました。再試行してください。");
+          }
+        });
+    </script>
+  </body>
+</html>

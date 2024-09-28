@@ -17,5 +17,5 @@ if (username && sessionID) {
 }
 else {
     alert('ログインしてください');
-    location.href = '/COLDSWORD/login';
+    location.href = '/login';
 }

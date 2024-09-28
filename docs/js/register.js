@@ -11,7 +11,7 @@ function register(){
         if (res.status === 200) {
             localStorage.setItem('username', username);
             localStorage.setItem('sessionID', data.data.sessionID);
-            location.href = '/COLDSWORD/';
+            location.href = '/auth-session';
         }
         else
             alert(res.data.message);

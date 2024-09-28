@@ -11,7 +11,7 @@ function logout() {
         .then(res => {
             localStorage.removeItem('username');
             localStorage.removeItem('sessionID');
-            location.href = '/login';
+            location.href = '/COLDSWORD/login/';
         })
         .catch(err => console.error(err));
 }

@@ -37,7 +37,7 @@
         margin-top: 15px;
       }
     </style>
-    <link rel="stylesheet" href="/COLDSWORD/css/style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
     <h1>サインアップ</h1>
@@ -89,7 +89,7 @@
             });
 
             if (response.ok) {
-              window.location.href = "/COLDSWORD/game/";
+              window.location.href = "../game/";
             } else {
               const errorMessage = await response.text();
               alert(`アカウント作成に失敗しました: ${errorMessage}`);

@@ -41,7 +41,7 @@
             margin-top: 15px;
         }
     </style>
-    <link rel="stylesheet" href="/COLDSWORD/css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <h1>ログイン</h1>
@@ -65,7 +65,7 @@
         window.onload = function() {
             const loggedInUser = localStorage.getItem('loggedInUser');
             if (loggedInUser) {
-                window.location.href = '/COLDSWORD/';
+                window.location.href = '../';
             }
         };
 
@@ -94,7 +94,7 @@
             if (response.ok) {
                 // ログイン成功時にユーザーネームを localStorage に保存
                 localStorage.setItem('loggedInUser', nickname);
-                window.location.href = '/COLDSWORD/';
+                window.location.href = '../';
             } else {
                 errorMsg.textContent = result.message || 'ログインに失敗しました。';
             }

@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/oruger-0730/COLDSWORD/issues"
   },
-  "homepage": "https://github.com/oruger-0730/COLDSWORD#readme"
+  "homepage": "https://github.com/oruger-0730/COLDSWORD#readme",
+  "dependencies": {
+    "http": "^0.0.1-security"
+  }
 }

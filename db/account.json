@@ -1,0 +1,22 @@
+{
+    "admin": {
+        "password": "coldsword",
+        "sessions": {
+            "qnzofhn9": {
+                "ipAddress": "172.0.1.10",
+                "lastAccess": "2021-07-01T00:00:00.000Z"
+            }
+        },
+        "enabled": false
+    },
+    "user": {
+        "password": "coldsword",
+        "sessions": {
+            "nd27Z7xw": {
+                "ipAddress": "172.0.1.11",
+                "lastAccess": "2021-07-01T00:00:00.000Z"
+            }
+        },
+        "enabled": false
+    }
+}

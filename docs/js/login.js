@@ -1,4 +1,4 @@
-if (document.localStorage.getItem('username') && document.localStorage.getItem('sessionID')) {
+if (localStorage.getItem('username') && localStorage.getItem('sessionID')) {
     location.href = '../';
 }
 function login() {

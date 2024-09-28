@@ -16,6 +16,5 @@ if (username && sessionID) {
         .catch(err => console.error(err));
 }
 else {
-    alert('ログインしてください');
     location.href = '../login';//TODO: ログインページのURLに変更
 }

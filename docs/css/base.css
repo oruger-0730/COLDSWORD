@@ -6,6 +6,20 @@ header .username {
   font-size: 18px;
   color: #333333;
 }
+header #loginButton {
+  position: absolute;
+  top: 10px;
+  right: 100px;
+  font-size: 18px;
+  color: #333333;
+}
+header #registerButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 18px;
+  color: #333333;
+}
 
 body {
   background-color: #fafafa;

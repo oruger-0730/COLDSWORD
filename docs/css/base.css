@@ -1,4 +1,12 @@
 @charset "UTF-8";
+header .username {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 18px;
+  color: #333333;
+}
+
 body {
   background-color: #fafafa;
   min-height: 100vh; /*画面の高さの最小値を指定*/

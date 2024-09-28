@@ -8,7 +8,7 @@ const db = new Database();
 
 // port number 80 is the default port for http
 // If you want to use number < 1024, you may need to run the server as root
-const port = process.env.PORT || 80;
+const port = fs.readFileSync('./.env', 'utf8').split('=')[1].trim() || 3000;
 
 const server = http.createServer((req, res) => {
     let url = req.url.replace(/\?.*$/, '');

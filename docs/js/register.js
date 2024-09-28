@@ -12,9 +12,10 @@ function register() {
     })
         .then(res => res.json())
         .then(res => {
+            console.log(res);
             if (res.status === 201) {
                 localStorage.setItem('username', username);
-                localStorage.setItem('sessionID', data.data.sessionID);
+                localStorage.setItem('sessionID', res.data.sessionID);
                 location.href = '../';
             }
             else

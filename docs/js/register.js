@@ -14,7 +14,7 @@ function register() {
         .then(res => {
             if (res.status === 201) {
                 localStorage.setItem('username', username);
-                localStorage.setItem('sessionID', data.data.sessionID);
+                localStorage.setItem('sessionID', res.data.sessionID);
                 location.href = '../';
             }
             else

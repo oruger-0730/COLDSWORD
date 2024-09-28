@@ -60,45 +60,10 @@
         </form>
     </div>
 
-    <script>
-        // ページが読み込まれた際にlocalStorageをチェック
-        window.onload = function() {
-            const loggedInUser = localStorage.getItem('loggedInUser');
-            if (loggedInUser) {
-                window.location.href = '../';
-            }
-        };
-
-        document.getElementById('loginForm').addEventListener('submit', async function (e) {
-            e.preventDefault();
-
-            const nickname = document.getElementById('nickname').value;
-            const password = document.getElementById('password').value;
-            const errorMsg = document.getElementById('errorMsg');
-            errorMsg.textContent = ''; // エラーメッセージをクリア
-
-            const loginData = {
-                nickname: nickname,
-                password: password
-            };
-
-            const response = await fetch('/login', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(loginData)
-            });
-
-            const result = await response.json();
-            if (response.ok) {
-                // ログイン成功時にユーザーネームを localStorage に保存
-                localStorage.setItem('loggedInUser', nickname);
-                window.location.href = '../';
-            } else {
-                errorMsg.textContent = result.message || 'ログインに失敗しました。';
-            }
-        });
-    </script>
+    <div>
+        <h3>アカウントをお持ちではありませんか？</h3>
+        <a href="../signup" class="btn">新規登録</a>
+    </div>
+    <script src="../js/login.js"></script>
 </body>
 </html>

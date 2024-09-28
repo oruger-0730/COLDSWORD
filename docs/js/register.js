@@ -1,4 +1,7 @@
-function register(){
+if (document.localStorage.getItem('username') && document.localStorage.getItem('sessionID')) {
+    location.href = '../';
+}
+function register() {
     let username = document.getElementById('username').value;
     let password = document.getElementById('password').value;
     let birthday = document.getElementById('dob').value;
@@ -9,13 +12,13 @@ function register(){
     })
         .then(res => res.json())
         .then(res => {
-        if (res.status === 200) {
-            localStorage.setItem('username', username);
-            localStorage.setItem('sessionID', data.data.sessionID);
-            location.href = '../';
-        }
-        else
-            alert(res.data.message);
-    })
+            if (res.status === 201) {
+                localStorage.setItem('username', username);
+                localStorage.setItem('sessionID', data.data.sessionID);
+                location.href = '../';
+            }
+            else
+                alert(res.data.message);
+        })
         .catch(err => console.error(err));
 }

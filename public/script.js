@@ -71,7 +71,7 @@ function logout() {
     const confirmation = confirm("ログアウトしますか？");
 
     // 「はい」が押された場合にログアウト処理を実行
-    if (confirmation) {
+    if (confirmation){ 
         // localStorage からユーザーデータを消去
         localStorage.removeItem('loggedInUser');
 

@@ -33,32 +33,54 @@ body {
   flex-direction: column;
   main {
     flex-grow: 1;
-  }
-  footer {
-    background-color: black;
+    margin: 1rem, auto;
     padding: 1rem;
-    text-align: center;
-    .foot__container {
+    .form__container {
+      font-size: 1.1em;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
-      margin: 1rem auto;
-      a {
-        display: inline-block;
+      justify-content: center;
+      padding: 1rem;
+      max-width: 600px;
+      margin: auto;
+      border: 1px solid #888;
+      border-radius: 24px;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      input {
+        line-height: 1.5;
+        font-size: 1rem;
         padding: 0.5rem;
-        color: white;
-        margin: 0 0.5rem;
-        &:hover {
-          color: $color;
+        margin: 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        &:focus {
+          outline: none;
+          border-color: #ffa620;
         }
       }
-      @media screen and (max-width: 768px) {
-        flex-direction: column;
+      button {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+        margin: 0.5rem;
+        border: 2px solid $color;
+        border-radius: 24px;
+        cursor: pointer;
+        &:hover {
+          background-color: darken($color, 10%);
+        }
       }
-    }
-    .cpr {
-      text-align: right;
-      margin: 1rem;
+      a {
+        border: 1px solid $color;
+        border-radius: 8px;
+        padding: 0.5rem 1rem;
+        color: black;
+        text-decoration: none;
+        &:hover {
+          background-color: darken($color, 10%);
+        }
+      }
     }
   }
 }

@@ -1,69 +1,28 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ログイン - コールドソード</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;                 /* フレックスボックスを使用 */
-            justify-content: center;       /* 水平方向の中央揃え */
-            align-items: center;           /* 垂直方向の中央揃え */
-            height: 100vh;                /* ビューポートの高さに合わせる */
-            margin: 0;                    /* マージンをリセット */
-        }
-        .error {
-            color: red;
-            font-weight: bold;
-        }
-        .form-container {
-            text-align: center;            /* フォームの内容を中央揃え */
-            max-width: 400px;             /* フォームの最大幅 */
-            width: 100%;                   /* 幅を100%に設定 */
-        }
-        h1 {
-            position: absolute;            /* 絶対位置を指定 */
-            top: 20px;                    /* 上からの位置 */
-            left: 20px;                   /* 左からの位置 */
-            margin: 0;                    /* マージンをリセット */
-        }
-        label {
-            display: block;
-            margin-top: 10px;
-        }
-        input {
-            width: 100%;
-            padding: 8px;
-            margin-top: 5px;
-        }
-        button {
-            margin-top: 15px;
-        }
-    </style>
-    <link rel="stylesheet" href="./../css/style.css">
+    <link rel="stylesheet" href="./../css/base.css">
 </head>
+
 <body>
-    <h1>ログイン</h1>
-
-    <div class="form-container">
-        <div id="errorMsg" class="error"></div>
-
-        <form id="loginForm">
+    <main>
+        <h1>ログイン</h1>
+        <div class="form__container">
             <label for="username">ユーザーネーム:</label>
-            <input type="text" id="username" name="username" required><br><br>
-
+            <input type="text" id="username" name="username" required>
             <label for="password">パスワード:</label>
-            <input type="password" id="password" name="password" required><br><br>
-
-            <button type="submit" class="btn">ログイン</button>
-        </form>
-    </div>
-
-    <div>
-        <h3>アカウントをお持ちではありませんか？</h3>
-        <a href="./../register/" class="btn">新規登録</a>
-    </div>
-    <script src="./../js/login.js"></script>
+            <input type="password" id="password" name="password" required>
+            <button onclick="login()">ログイン</button>
+            <h3>アカウントをお持ちではありませんか？</h3>
+            <a href="./../register/" class="btn">新規登録</a>
+            <p class="errorMsg" id="errorMsg"></p>
+        </div>
+    </main>
 </body>
+<script src="./../js/login.js"></script>
+
 </html>

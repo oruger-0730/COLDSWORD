@@ -5,76 +5,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>サインアップ - コールドソード</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      display: flex;
-      /* フレックスボックスを使用 */
-      justify-content: center;
-      /* 水平方向の中央揃え */
-      align-items: center;
-      /* 垂直方向の中央揃え */
-      height: 100vh;
-      /* ビューポートの高さに合わせる */
-      margin: 0;
-      /* マージンをリセット */
-    }
-
-    .form-container {
-      text-align: center;
-      /* フォームの内容を中央揃え */
-      max-width: 400px;
-      /* フォームの最大幅 */
-      width: 100%;
-      /* 幅を100%に設定 */
-    }
-
-    h1 {
-      position: absolute;
-      /* 絶対位置を指定 */
-      top: 20px;
-      /* 上からの位置 */
-      left: 20px;
-      /* 左からの位置 */
-      margin: 0;
-      /* マージンをリセット */
-    }
-
-    label {
-      display: block;
-      margin-top: 10px;
-    }
-
-    input {
-      width: 100%;
-      padding: 8px;
-      margin-top: 5px;
-    }
-
-    button {
-      margin-top: 15px;
-    }
-  </style>
-  <link rel="stylesheet" href="./../css/style.css" />
+  <link rel="stylesheet" href="./../css/base.css" />
 </head>
 
 <body>
-  <h1>サインアップ</h1>
-  <div class="form-container">
-    <form id="newAccountForm" action="https://coldsword.jun-suzu.net/create-account" method="POST">
-      <label for="username">ユーザーネーム:</label>
+  <main>
+    <h1>新規アカウント登録</h1>
+    <div class="form__container">
+      <label for="username">ユーザーネーム</label>
       <input type="text" id="username" name="username" minlength="3" maxlength="20" required />
-
-      <label for="password">パスワード:</label>
+      <label for="password">パスワード</label>
       <input type="password" id="password" name="password" minlength="10" required />
-
-      <label for="dob">生年月日:</label>
+      <label for="dob">生年月日</label>
       <input type="date" id="dob" name="dob" required />
-
       <button onclick="register()">アカウント作成</button>
-    </form>
-  </div>
-  <script src="./../js/register.js"></script>
+      <p class="errorMsg" id="errorMsg"></p>
+    </div>
+  </main>
 </body>
+<script src="./../js/register.js"></script>
 
 </html>

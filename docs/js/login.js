@@ -1,5 +1,5 @@
 if (localStorage.getItem('username') && localStorage.getItem('sessionID')) {
-    location.href = '../';
+    location.href = './../';
 }
 function login() {
     let username = document.getElementById('username').value;
@@ -14,7 +14,7 @@ function login() {
             if (res.status === 200) {
                 localStorage.setItem('username', username);
                 localStorage.setItem('sessionID', res.data.sessionID);
-                location.href = '../';
+                location.href = './../';
             }
         })
         .catch(err => console.error(err));

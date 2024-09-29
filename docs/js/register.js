@@ -1,5 +1,5 @@
 if (localStorage.getItem('username') && localStorage.getItem('sessionID')) {
-    location.href = '../';
+    location.href = './../';
 }
 function register() {
     let username = document.getElementById('username').value;
@@ -13,13 +13,16 @@ function register() {
         .then(res => res.json())
         .then(res => {
             console.log(res);
-            if (res.status === 201) {
-                localStorage.setItem('username', username);
-                localStorage.setItem('sessionID', res.data.sessionID);
-                location.href = '../';
-            }
-            else
-                alert(res.data.message);
+            // sleep(1000);
+            setTimeout(() => {
+                if (res.status === 201) {
+                    alert('アカウントが作成されました');
+                    location.href = './../login';
+                }
+                else {
+                    alert(res.data.message);
+                }
+            }, 1000);
         })
         .catch(err => console.error(err));
 }

@@ -16,5 +16,5 @@ if (username && sessionID) {
         .catch(err => console.error(err));
 }
 else {
-    location.href = '../login';//TODO: ログインページのURLに変更
+    location.href = './../login';//TODO: ログインページのURLに変更
 }

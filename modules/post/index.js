@@ -1,5 +1,5 @@
 const { stat } = require('fs');
-const Database = require('../db');
+const Database = require('./../db');
 const db = new Database();
 module.exports = function (url, data, ipadr) {
     if (url === '/create-account') {

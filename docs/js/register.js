@@ -10,7 +10,10 @@ function register() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, password, birthday })
     })
-        .then(res => res.json())
+        .then(res => {
+            console.log(res);
+            return res.json();
+        })
         .then(res => {
             console.log(res);
             // sleep(1000);

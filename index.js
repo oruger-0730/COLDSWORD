@@ -47,7 +47,8 @@ const server = http.createServer((req, res) => {
                 data = JSON.parse(body);
                 let { status, resData } = UrlProcessor(url, method, data, ipadr);
                 res.writeHead(status, {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin': 'https://oruger-0730.github.io'
                 });
                 res.end(JSON.stringify(resData));
             }

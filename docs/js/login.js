@@ -10,6 +10,7 @@ function login() {
         body: JSON.stringify({ username, password })
     })
         .then(res => {
+            console.log(JSON.stringify(res));
             if (res.status === 200) {
                 res.json().then(data => {
                     localStorage.setItem('username', username);

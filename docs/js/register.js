@@ -11,18 +11,11 @@ function register() {
         body: JSON.stringify({ username, password, birthday })
     })
         .then(res => {
-            console.log(res);
-            return res.json();
-        })
-        .then(res => {
-            console.log(res);
             if (res.status === 201) {
-                alert('Account created successfully!');
-                location.href = './../';
-            }
-            else {
-                alert(res.message);
+                res.json().then(data => {
+                    alert('Account created successfully! Please log in.');
+                    location.href = './../login/';
+                });
             }
         })
-        .catch(err => console.error(err));
 }

@@ -9,13 +9,13 @@ function login() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, password })
     })
-        .then(res => res.json())
         .then(res => {
             if (res.status === 200) {
-                localStorage.setItem('username', username);
-                localStorage.setItem('sessionID', res.data.sessionID);
-                location.href = './../';
+                res.json().then(data => {
+                    localStorage.setItem('username', username);
+                    localStorage.setItem('sessionID', data.sessionID);
+                    location.href = './../';
+                });
             }
         })
-        .catch(err => console.error(err));
 }

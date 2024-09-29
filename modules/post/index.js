@@ -14,7 +14,7 @@ module.exports = function (url, data, ipadr) {
         // if the user is under 14 years old, disable the account and wait for the user to be 14 years old
         if (new Date().getFullYear() - new Date(birthday).getFullYear() < 14) db.accountData[username].enabled = false;
         db.write('account');
-        return { message: 'アカウントが作成されました', status: 201 };
+        return { status: 201, data: { message: 'アカウントが作成されました' } };
     }
     else if (url === '/login') {
         const { username, password } = data;

@@ -16,16 +16,13 @@ function register() {
         })
         .then(res => {
             console.log(res);
-            // sleep(1000);
-            setTimeout(() => {
-                if (res.status === 201) {
-                    alert('アカウントが作成されました');
-                    location.href = './../login';
-                }
-                else {
-                    alert(res.data.message);
-                }
-            }, 1000);
+            if (res.status === 201) {
+                alert('Account created successfully!');
+                location.href = './../';
+            }
+            else {
+                alert(res.message);
+            }
         })
         .catch(err => console.error(err));
 }

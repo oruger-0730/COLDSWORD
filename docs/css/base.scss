@@ -3,26 +3,24 @@ $background-color: #fafafa;
 $color: #a3e6ff;
 
 header {
-  .username {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 18px;
-    color: #333333;
+  .user__info__panel {
+    margin-top: .1rem;
+    display: flex;
+    #userName {
+      margin-left: 1rem;
+      padding: .1rem;
+      border: .4rem double #52432a;
+      border-radius: .8rem;
+      font-family: "Mochiy Pop One", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      color: #2c0711;
+      background-color: #9f8353;
+    }
   }
-  #loginButton {
-    position: absolute;
-    top: 10px;
-    right: 100px;
-    font-size: 18px;
-    color: #333333;
-  }
-  #registerButton {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 18px;
-    color: #333333;
+  h1 {
+    font-size: 2rem;
+    text-align: center;
   }
 }
 
@@ -35,52 +33,5 @@ body {
     flex-grow: 1;
     margin: 1rem, auto;
     padding: 1rem;
-    .form__container {
-      font-size: 1.1em;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 1rem;
-      max-width: 600px;
-      margin: auto;
-      border: 1px solid #888;
-      border-radius: 24px;
-      background-color: white;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      input {
-        line-height: 1.5;
-        font-size: 1rem;
-        padding: 0.5rem;
-        margin: 0.5rem;
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        &:focus {
-          outline: none;
-          border-color: #ffa620;
-        }
-      }
-      button {
-        font-size: 1rem;
-        padding: 0.5rem 1rem;
-        margin: 0.5rem;
-        border: 2px solid $color;
-        border-radius: 24px;
-        cursor: pointer;
-        &:hover {
-          background-color: darken($color, 10%);
-        }
-      }
-      a {
-        border: 1px solid $color;
-        border-radius: 8px;
-        padding: 0.5rem 1rem;
-        color: black;
-        text-decoration: none;
-        &:hover {
-          background-color: darken($color, 10%);
-        }
-      }
-    }
   }
 }

@@ -1,0 +1,46 @@
+main .game__content__panel {
+  width: 60vw;
+  height: 60vh;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: lightblue;
+}
+main .game__content__panel .left__items__panel {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+main .game__content__panel .left__items__panel .top__button, main .game__content__panel .left__items__panel .left__button, main .game__content__panel .left__items__panel .right__button {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+main .game__content__panel .left__items__panel .top__button {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 21%, 50% 50%, 0 21%);
+          clip-path: polygon(0 0, 100% 0, 100% 21%, 50% 50%, 0 21%);
+  background-color: lightcoral;
+}
+main .game__content__panel .left__items__panel .left__button {
+  -webkit-clip-path: polygon(0 22%, 50% 50%, 50% 100%, 0 100%);
+          clip-path: polygon(0 22%, 50% 50%, 50% 100%, 0 100%);
+  background-color: lightgreen;
+}
+main .game__content__panel .left__items__panel .right__button {
+  -webkit-clip-path: polygon(50% 50%, 100% 22%, 100% 100%, 50% 100%);
+          clip-path: polygon(50% 50%, 100% 22%, 100% 100%, 50% 100%);
+  background-color: pink;
+}
+main .event__info__panel {
+  display: none;
+  position: absolute;
+  width: 60vw;
+  height: 20vh;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: lightgray;
+}

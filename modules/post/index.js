@@ -21,7 +21,7 @@ module.exports = function (url, data, ipadr) {
         db.read('account');
         // trivia: which username or password is wrong? we should not tell the user
         if (!db.accountData[username] || db.accountData[username].password !== password) return { status: 401, data: { message: 'ユーザー名またはパスワードが間違っています' } };
-        let sessionID = Math.random().toString(36).substr(10);
+        let sessionID = Math.random().toString(36).substr(2, 20);
         db.accountData[username].sessions[sessionID] = { "ipAddress": ipadr, "time": new Date().toISOString(), "enabled": true };
         db.write('account');
         return { status: 200, data: { message: 'ログインに成功しました', sessionID } };

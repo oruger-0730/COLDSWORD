@@ -5,31 +5,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>コールドソード - カードゲーム</title>
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="./css/base.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+  </style>
 </head>
 
 <body>
   <header>
-    <div id="user__info__panel">
+    <div class="user__info__panel">
       <img src="" alt="ユーザーのアイコン画像" id="userIcon">
-      <span id="userName">ゲスト</span>
+      <p id="userName">ゲスト</p>
       <a href="./login/" id="loginButton">ログイン</a>
       <a href="./register/" id="registerButton">新規登録</a>
     </div>
+    <h1 class="title">コールドソード</h1>
   </header>
   <main>
     <div id="rotate-warning">
       画面を横向きにしてください。
     </div>
     <div class="game__content__panel">
-      <h1 class="title">コールドソード</h1>
       <div class="button-container">
         <a href="./game/" class="button">ゲームを始める</a>
         <a href="./maintenance/" class="button">メンテナンス情報</a>
       </div>
   </main>
 </body>
-<script src="./../js/script.js"></script>
+<script src="./js/script.js"></script>
 
 </html>

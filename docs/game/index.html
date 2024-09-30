@@ -1,73 +1,49 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>COLD SWORD</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        text-align: center;
-        margin: 0;
-      }
 
-      h1 {
-        margin-top: 100px;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>コールドソード</title>
+  <link rel="stylesheet" href="./../css/reset.css">
+  <link rel="stylesheet" href="./../css/base.css">
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+  </style>
+</head>
 
-      .container {
-        display: flex;
-        justify-content: space-around;
-        margin-top: 50px;
-      }
-
-      .league,
-      .ai,
-      .player {
-        border: 2px solid black;
-        padding: 20px;
-        width: 150px;
-        height: 100px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 18px;
-        font-weight: bold;
-      }
-      .league {
-        position: absolute;
-        top: 60%;
-        left: 20%;
-        transform: translateY(-50%);
-      }
-
-      .ai {
-        position: absolute;
-        top: 40%;
-        right: 25%;
-      }
-
-      .player {
-        position: absolute;
-        top: 60%;
-        right: 25%;
-      }
-
-      a {
-        text-decoration: none;
-        color: black;
-      }
-    </style>
-    <link rel="stylesheet" href="./../css/style.css">
-  </head>
-  <body>
-    <h1>COLD SWORD</h1>
-    <div class="username" id="username"></div>
-    <div class="container">
-      <a href="./../leaguematch/" class="league">リーグ戦</a>
-      <a href="./../AImatch/" class="ai">練習戦(AI戦)</a>
-      <a href="./../playermatch/" class="player">練習戦(プレイヤー戦)</a>
+<body>
+  <header>
+    <div class="user__info__panel">
+      <img src="" alt="ユーザーのアイコン画像" id="userIcon">
+      <p id="userName">ゲスト</p>
     </div>
-    <script src="./../js/auth-session.js"></script>
-  </body>
+    <h1>コールドソード</h1>
+  </header>
+  <main>
+    <div class="game__content__panel">
+      <div class="left__items__panel">
+        <a href="./../league/" class="top__button"><h2>リーグ戦</h2></a>
+        <a href="./../event/" class="left__button"><h2>イベント</h2></a>
+        <a href="./../practice/" class="right__button"><h2>練習</h2></a>
+        <div class="center__button"></div>
+      </div>
+      <div class="right__items__panel">
+        <a href="./../reinforcement/" class="top__button"><h2>キャラクター強化</h2></a>
+        <a href="./../gacha/" class="left__button"><h2>ガチャ</h2></a>
+        <a href="./../exchange/" class="right__button"><h2>交換所</h2></a>
+        <a href="./../deck/" class="bottom__button"><h2>デッキ編成</h2></a>
+      </div>
+    </div>
+    <button class="event__info__button" onclick="showEventInfo()">イベント情報</button>
+    <div class="event__info__panel" id="eventInfoPanel">
+      <h2>イベント情報</h2>
+      <p>現在開催中のイベントはありません。</p>
+    </div>
+    <!-- advertisement will be placed here -->
+  </main>
+</body>
+<script src="./../js/auth-session.js"></script>
+
 </html>

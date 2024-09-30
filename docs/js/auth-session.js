@@ -9,9 +9,9 @@ if (username && sessionID) {
         .then(res => res.json())
         .then(data => {
         if (data.status === 200)
-            alert(data.data.message);
+            alert(data.message);
         else
-            alert(data.data.message);
+            alert(data.message);
     })
         .catch(err => console.error(err));
 }

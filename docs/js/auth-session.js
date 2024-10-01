@@ -9,13 +9,12 @@ if (username && sessionID) {
         .then(res => res.json())
         .then(data => {
         if (data.status === 200)
-            alert(data.data.message);
+            alert(data.message);
         else
-            alert(data.data.message);
+            alert(data.message);
     })
         .catch(err => console.error(err));
 }
 else {
-    alert('ログインしてください');
-    location.href = '/login';
+    location.href = './../login';//TODO: ログインページのURLに変更
 }

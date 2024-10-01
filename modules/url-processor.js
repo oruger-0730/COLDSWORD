@@ -9,25 +9,25 @@ function UrlProcessor(url, method, data) {
         case 'POST':{
             // logic here
             let resData = POSTer(url, data);
-            return { status: resData.status, resData: JSON.stringify(resData.data) };
+            return { status: resData.status, resData: resData.data };
         }
         case 'PUT': {
             // logic here
             let resData = PUTer(url, data);
-            return { status: resData.status, resData: JSON.stringify(resData.data) };
+            return { status: resData.status, resData: resData.data };
         }
         case 'PATCH':{
             // logic here
             let resData = PATCHer(url, data);
-            return { status: resData.status, resData: JSON.stringify(resData.data) };
+            return { status: resData.status, resData: resData.data };
         }
         case 'DELETE':{
             // logic here
             let resData = DELETEer(url, data);
-            return { status: resData.status, resData: JSON.stringify(resData.data) };
+            return { status: resData.status, resData: resData.data };
         }
         default:
-            return { status: 405, resData: JSON.stringify({ message: 'Invalid method' }) };
+            return { status: 405, resData: { message: 'Invalid method' } };
     }
 }
 

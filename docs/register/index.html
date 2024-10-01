@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>サインアップ - コールドソード</title>
+  <link rel="stylesheet" href="./../css/reset.css">
+  <link rel="stylesheet" href="./../css/base.css" />
+  <link rel="stylesheet" href="./../css/form.css" />
+</head>
+
+<body>
+  <main>
+    <h1>新規アカウント登録</h1>
+    <div class="form__container">
+      <label for="username">ユーザーネーム</label>
+      <input type="text" id="username" name="username" minlength="3" maxlength="20" required />
+      <label for="password">パスワード</label>
+      <input type="password" id="password" name="password" minlength="10" required />
+      <label for="dob">生年月日</label>
+      <input type="date" id="dob" name="dob" required />
+      <button onclick="register()">アカウント作成</button>
+      <p class="errorMsg" id="errorMsg"></p>
+    </div>
+  </main>
+</body>
+<script src="./../js/register.js"></script>
+
+</html>

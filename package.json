@@ -1,14 +1,29 @@
 {
-  "name": "cold-sword",
+  "name": "coldsword",
   "version": "1.0.0",
-  "description": "コールドソード（カードゲーム）",
+  "description": "cardgame",
   "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
   "scripts": {
-    "start": "node index.js"
+    "test": "node --env-file=.env index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oruger-0730/COLDSWORD.git"
+  },
+  "keywords": [
+    "cold",
+    "sword"
+  ],
+  "author": "oruger",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oruger-0730/COLDSWORD/issues"
+  },
+  "homepage": "https://github.com/oruger-0730/COLDSWORD#readme",
   "dependencies": {
-    "express": "^4.17.1",
-    "body-parser": "^1.19.0"
-  },
-  "license": "MIT"
+    "http": "^0.0.1-security"
+  }
 }

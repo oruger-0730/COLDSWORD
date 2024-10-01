@@ -1,0 +1,32 @@
+@charset "UTF-8";
+header .user__info__panel {
+  margin-top: 0.1rem;
+  display: flex;
+}
+header .user__info__panel #userName {
+  margin-left: 1rem;
+  padding: 0.1rem;
+  border: 0.4rem double #52432a;
+  border-radius: 0.8rem;
+  font-family: "Mochiy Pop One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #2c0711;
+  background-color: #9f8353;
+}
+header h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+body {
+  background-color: #fafafa;
+  min-height: 100vh; /*画面の高さの最小値を指定*/
+  display: flex;
+  flex-direction: column;
+}
+body main {
+  flex-grow: 1;
+  margin: 1rem, auto;
+  padding: 1rem;
+}

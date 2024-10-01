@@ -11,7 +11,7 @@ COLD SWORDのサーバープログラムです。
 
 以下のツリーコマンドで更新してください。
 ```bash
-tree -I 'node_modules|dist|__tests__|__mocks__|__snapshots__'
+tree -n -I "node_modules" . -o file_structure.txt
 ```
 
 ## ライセンス

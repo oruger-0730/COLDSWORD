@@ -11,11 +11,13 @@
 │   ├── css
 │   │   ├── base.css
 │   │   ├── base.scss
-│   │   ├── reset.css
+│   │   ├── form.css
+│   │   ├── form.scss
+│   │   └── reset.css
+│   ├── game
+│   │   ├── index.html
 │   │   ├── style.css
 │   │   └── style.scss
-│   ├── game
-│   │   └── index.html
 │   ├── index.html
 │   ├── js
 │   │   ├── auth-session.js
@@ -23,16 +25,19 @@
 │   │   ├── logout.js
 │   │   ├── register.js
 │   │   └── script.js
-│   ├── leaguematch
+│   ├── league
 │   │   └── index.html
 │   ├── login
 │   │   └── index.html
+│   ├── logout
 │   ├── maintenance
 │   │   └── index.html
 │   ├── playermatch
 │   │   └── index.html
-│   └── signup
-│       └── index.html
+│   ├── register
+│   │   └── index.html
+│   ├── style.css
+│   └── style.scss
 ├── file_structure.txt
 ├── index.js
 ├── modules
@@ -51,4 +56,4 @@
 ├── README.md
 └── rule.txt
 
-17 directories, 35 files
+18 directories, 39 files
